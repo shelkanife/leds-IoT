@@ -27,6 +27,12 @@ function disconnectClient(){
     console.log("Cliente desconectado")
 }
 
+function command(mensaje){
+    console.log(mensaje)
+    message = new Paho.MQTT.Message(mensaje)
+    message.destinationName = "entrada"
+    client.send(message)
+}
 
 function command(mensaje){
     console.log(mensaje)

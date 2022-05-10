@@ -17,5 +17,9 @@ const hide = element => element.classList.add('hidden')
 const show = element => element.classList.remove('hidden')
 
 btns.forEach((btn,index) => {
-    btn.addEventListener('click',(e) => toggleClass(index+1))
+    let btnIndex = index+1
+    btn.addEventListener('click',(e) => {
+        toggleClass(btnIndex)
+        command(btnIndex+"")
+    })
 })

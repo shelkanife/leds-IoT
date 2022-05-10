@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font-family:'VT323', monospace;
+    --body-color:#004173;
+    --canvas-color:#0979b0;
+    --btn-color:#065E70;
+    --font-color:#068073;
+}
+
+body{
+    /* width: 100%; */
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* border: 1px solid black; */
+    background-color: var(--body-color);
+    scroll-behavior: 80px;
+}
+h1{
+    font-family: var(--font-family);
+    text-align: center;
+    font-size: 6em;
+    color: var(--font-color);
+}
+h4{
+    font-family: var(--font-family);
+    font-size: 2em;
+    color: var(--font-color);
+    text-align: center;
+}
+span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--font-color);
+    border-radius: 50%;
+    margin-top: auto;
+}
+.div{
+    background-color: var(--canvas-color);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 200px;
+    width: 350px ;
+}
+#disenos{
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns:repeat(auto-fill,355px);
+    column-gap: 40px;
+    justify-content:center;
+    row-gap: 40px;
+}
+.contenedorDiseno{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px white solid;
+    padding: 10px;
+    border-radius: 10px;
+    max-height: 351px;
+}
+.btn{
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    font-size: 30px;
+    cursor: pointer;
+    font-family: var(--font-family);
+    background-color: var(--btn-color);
+}
+.tickIcon{
+    position: relative;
+    top: 15px;
+    right: -310px;
+    font-size: 50px;
+    color: var(--font-color);
+    background-color: none;
+}
+.hidden{
+    visibility: hidden !important;
+}
+.connected{
+    background-color: green;
+}
+.disconnected{
+    background-color: red;
+}

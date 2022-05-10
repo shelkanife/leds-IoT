@@ -1,18 +1,20 @@
 let clientId = `client_id_${Math.floor((Math.random()*1000000)+1)}`
-let client = new Paho.MQTT.Client("broker.hivemq.com",8000,clientId)
+let client = new Paho.MQTT.Client("bca1dd0c.us-east-1.emqx.cloud",8084,clientId)
 client.onConnectionLost = onConnectionLost
 client.onMessageArrived = onMessageArrived
 
 let options = {
-    // useSSL:true,
+    useSSL:true,
     userName:"davefork",
-    password:"myPass@1",
+    password:"myPass",
     onSuccess:onConnect,
     onFailure:onConnectionLost
 }
 client.connect(options);
 
 function onConnect() {
+    console.log(clientId)
+
     $("#circle-status").removeClass("disconnect")
     $("#circle-status").addClass("connected")
     client.subscribe("salida");

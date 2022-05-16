@@ -6,7 +6,7 @@ client.onMessageArrived = onMessageArrived
 let options = {
     useSSL:true,
     userName:"davefork",
-    password:"myPass",
+    password:"123",
     onSuccess:onConnect,
     onFailure:onConnectionLost
 }
